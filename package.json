@@ -1,0 +1,36 @@
+{
+  "name": "tracevine",
+  "version": "1.0.0",
+  "description": "Terminal-native TypeScript/JS dependency graph tracer — detects circular dependencies, finds unused exports, and generates interactive HTML visualizations.",
+  "main": "dist/index.js",
+  "bin": {
+    "tracevine": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "trace": "node dist/index.js ./src -o graph.html",
+    "trace:strict": "node dist/index.js ./src --strict",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "typescript",
+    "dependency-graph",
+    "circular-dependencies",
+    "unused-exports",
+    "code-analysis",
+    "developer-tools",
+    "visualization"
+  ],
+  "author": "DucChau",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
